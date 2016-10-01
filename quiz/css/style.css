@@ -1,0 +1,14 @@
+#container {
+}
+#carousel {
+  border: 5px solid green;
+}
+.q {
+  border: 1px solid;
+  margin:2px;
+}
+body {
+  height: 800px;
+  width: 800px;
+  margin: 0 auto;
+}

@@ -1,0 +1,83 @@
+Quiz Title: General Knowledge and Pop Culture Trivia
+Quiz Desc(Alert): Hi All. Test Your knowledge and WIN
+Quiz Rules: 10 multiple choice Questions , 2 Players, Totally Random
+questions are worth 10 points each
+if there are 2 correct answers and you answer one correctly, you score 5 points
+player with the most points at the end of 10 questions wins
+if both players draw, both players have to answer a tie breaker
+if both players still draw, the player with no semi correct answer will be declared the winner
+
+game structure
+players enter site
+Carousel Begins
+players read rules
+press start game
+player one starts, answers qn at random
+player 1 clicks next
+if player 1 answers correct, he scores 10 points
+if player 1 answers wrong, he scores 0 points
+in the event of 2 correct answers: 1 correct answer = 2 correct answers = 10 pts,2 correct and 1 wrong =8 pts, 2 correct and 1 or more wrong : 6 pts,
+1 correct :5 points, 1 correct and 1 wrong answer:3 points, 1 correct and 2 or more wrong answers:1 point;
+(note: scores will only be revealed at the end of the game in a popup window)
+player 2 starts, answers qn at random
+player 2 clicks next
+if player 2 answers correct, add 10 points
+if player 2 answers wrong, add 0 points
+in the event of 2 correct answers: 2 correct answers = 10 pts,2 correct and 1 wrong =8 pts, 2 correct and 1 or more wrong : 6 pts,
+1 correct answer = 5 points, 1 correct and 1 wrong answer:3 points, 1 correct and 2 or more wrong answers:1 point;
+(note: scores will only be revealed at the end of the game in a popup window)
+back to player 1
+.
+.
+.
+.
+.
+player 2 answers last question
+scores are calculated behind the scenes....
+scores are displayed
+Winner/Draw announced:
+if player1 score > player2 score, player 1 wins and vice versa
+alert player x WINS
+Carousel Ends
+
+answer and score determination
+if correct, value in cell class X = value of correct answer
+eg Who sang HMBB1MT?
+if radio cell 1 is clicked(Britney), p1/p2Score = p1/p2Score +10
+if radio cell 2 is clicked(DeadMau5), p1/p2Score= p1/p2Score
+.
+.
+..
+.
+.
+.
+p1/p2Score(ttl)= p1/p2Score1+p1/p2Score2+........+p1/p2Score10;
+
+game cycle
+p1/p2Score =0
+.....
+loop Q1-Q10......
+...Q1..
+P1 clicks..
+if correct ans: p1Score = p1Score +10
+if wrong ans : p1Score= p1Score
+P2 clicks..
+if correct ans: p2Score = p2Score +10
+if wrong ans : p2Score= p2Score
+...end Q1...
+..Q2..
+AS ABV
+..end Q2..
+.
+.
+.
+.
+.
+..Q10..
+AS Q1
+..end Q10..
+......call game over......
+sum scores
+display scores in popup
+announce  winner/draw
+*if game is reset, call game over and return to Q1

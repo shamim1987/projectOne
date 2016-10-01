@@ -1,0 +1,60 @@
+﻿Project
+
+Project Submission
+
+Ensure that a soft launch of your project is up on github pages by Wednesday 5th October 2016.
+Submit your Project 1 repository details at the Project 1 submission page before 8AM on Friday 7th October 2016.
+Ensure that the master and gh-pages branches contain your latest project codes.
+Presentation format
+
+Presentations are 8 mins: 5 mins presentation and 3 mins feedback/Q&A
+Students to present one project (Either project 1A or 1B)
+Order of student presentations will be written on the board at the start of the day at 9AM. The presentation order will be random.
+Student before the current presenter to give feedback in the form of one glow comment (One great thing about their project)
+Student after the current presenter to give feedback in the form of one grow comment (A possible improvement to their project)
+Things to mention during your presentation:
+
+Explain what your game is about and demo it
+Talk about your planning process
+Show your code
+Explain how you organized your code
+Share interesting code solutions
+Talk about any issues encountered during the project and how you overcame them.
+1a: Quiz Game
+
+Trivia Quiz
+
+Create A simple trivia quiz using Javascript, HTML and CSS.
+Game Instructions:
+
+2 players take turns to answer a series of questions. Questions can either be true/false or multiple choice questions. The person with the most correct answers out of 10 questions wins. The questions are randomised so one can play multiple times with different questions showing up each time.
+Sample Games: To be shown in class.
+You will need to declare the following functions:
+numberOfQuestions()
+
+It should return an integer that is the number of questions in a game
+currentQuestion()
+
+It should return an integer that is the zero-based index of the current question in the quiz
+correctAnswer()
+
+It should return an integer that is the zero-based index the correct answer for the currrent question
+numberOfChoices()
+
+It should return an integer that is the number of choices for the current question
+playTurn(choice)
+
+It should take a single integer, which specifies which choice the current player wants to make. It should return a boolean true/false if the answer is correct.
+isGameOver()
+
+It should return a true or false if the quiz is over.
+whoWon()
+
+It should return 0 if the game is not yet over, else it should return either 1 or 2 depending on which player won. It should return 3 if the game is a draw.+
+
+restart()
+
+It should restart the game so it can be played again.
+Assumptions
+
+Players take turns to answer the questions. After one player has answered, it will automatically be the next player's turn to answer.
