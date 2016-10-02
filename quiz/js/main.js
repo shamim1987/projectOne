@@ -1,3 +1,6 @@
+(document).ready(function () {
+alert("Good 2 Go");
+
 function numberOfQuestions() {
 
 }
@@ -34,3 +37,4 @@ function  restart() {
 
 }
 //It should restart the game so it can be played again.
+})

@@ -18,32 +18,10 @@
             </p>
 
         </div>
+        <div id="playerturn">
+          <h3 class="turn"></h3>
+        </div>
         <div id="carousel">
-          <!--  <div class="scores">
-                <table class="scorecard">
-                    <th>
-                        Scorecard
-                    </th>
-                    <tbody>
-                        <tr>
-                            <td>
-                                Player One
-                            </td>
-                            <td>
-                                Player Two
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="One">
-                                1
-                            </td>
-                            <td class="Two">
-                                2
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div> -->
             <div class="q 1">
                 <p class="xo">
                     Who Sang the Following Song?</p>
@@ -51,24 +29,24 @@
                     <input type="radio" name="name" value="">
                     <input type="radio" name="name" value="">
                 </form>
-                <button type="button" >Next</button>
+                <button type="button">Next</button>
             </div>
             <div class="q 2">
                 <table class="qn2">
                     <th>Which of the following are main characters of the Big Bang Theory?</th>
                     <tbody>
                         <tr>
-                            <td><input type="checkbox" name="name" value="Raj Koothrapali">Raj Koothrapali</td>
-                            <td><input type="checkbox" name="name" value="Leonard Nemoy">Leonard Nemoy</td>
-                          </tr>
-                          <tr>
-                            <td><input type="checkbox" name="name" value="Leonard Hofstadtter">Leonard Hofstadtter</td>
-                            <td><input type="checkbox" name="name" value="Donald Trump">Donald Trump</td>
+                            <td class="2 a"><input type="checkbox" name="name" value="Raj Koothrapali">Raj Koothrapali</td>
+                            <td class="2 b"><input type="checkbox" name="name" value="Leonard Nemoy">Leonard Nemoy</td>
+                        </tr>
+                        <tr>
+                            <td class="2 c"><input type="checkbox" name="name" value="Leonard Hofstadtter">Leonard Hofstadtter</td>
+                            <td class="2 d"><input type="checkbox" name="name" value="Donald Trump">Donald Trump</td>
 
                         </tr>
                     </tbody>
                 </table>
-                <button type="button" >Next</button>
+                <button type="button">Next</button>
             </div>
             <!--
             <div class="q 3">
@@ -177,15 +155,36 @@
             </div>
         </div>
 
-    </div>
   -->
         </div>
-        <script type="text/javascript" src="js/main.js">
 
-        </script>
-        <script type="text/javascript">
+            <div class="player1progress">
+                <h4>Player 1 Vital Signs</h4>
+                <p>
+                  Qn No:
+                </p>
+                <p>
+                  Score Bar
+                </p>
+            </div>
+            <div class="player2progress">
+              <h4>Player 2 Vital Signs</h4>
+              <p>
+                Qn No:
+              </p>
+              <p>
+                Score Bar
+              </p>
+            </div>
 
-        <script src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+    </div>
+    <script type="text/javascript" src="js/main.js">
+    </script>
+    <script type="text/javascript">
+        < script src = "https://code.jquery.com/jquery-3.1.1.js"
+        integrity = "sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+        crossorigin = "anonymous" >
+    </script>
 </body>
 
 </html>
