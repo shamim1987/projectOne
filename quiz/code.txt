@@ -107,3 +107,10 @@ var $currQn = $questions.currentQuestion();
         } else {
             playerTwoScore;
           };
+
+          function nextQuestion() {
+
+
+              $(divs[questionIndex]).removeClass('shown');
+              $(divs[questionIndex + 1]).addClass('shown');
+              questionIndex = questionIndex + 1;

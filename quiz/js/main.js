@@ -6,31 +6,31 @@ $(document).ready(function() {
     var playerTwoScore = 0;
     var answers = [0, 0, 1, 1, 0];
     var playerChoice;
-    // var divs = ['.one','two','three','four','five']
-    // for (i=0; i<divs.length;i++) {
-    //$('divs[i]').addClass('shown')};
-    $('.one').addClass('shown');
-    player=1
+    var divs = ['.one', '.two', '.three', '.four', '.five']
+    $(divs[questionIndex]).addClass('shown');
+    player = 1
     $('.a').click(function() {
         playerChoice = 0;
         if (player === 1) {
             var ansCheck = checkAnswer(questionIndex, playerChoice)
             console.log(ansCheck)
-            if (ansCheck===true) {
-              playerOneScore += 10;
-            }else {
-              playerOneScore;
-            };console.log(playerOneScore);
-             switchPlayer();
+            if (ansCheck === true) {
+                playerOneScore += 10;
+            } else {
+                playerOneScore;
+            };
+            console.log(playerOneScore);
+            switchPlayer();
         } else if (player === 2) {
             var ansCheck = checkAnswer(questionIndex, playerChoice);
             console.log(ansCheck);
-            if (ansCheck===true) {
-              playerTwoScore += 10;
-            }else {
-              playerTwoScore
-            };  console.log(playerTwoScore);
-             switchPlayer();
+            if (ansCheck === true) {
+                playerTwoScore += 10;
+            } else {
+                playerTwoScore
+            };
+            console.log(playerTwoScore);
+            switchPlayer();
         }
     });
     $('.b').click(function() {
@@ -38,26 +38,26 @@ $(document).ready(function() {
         if (player === 1) {
             var ansCheck = checkAnswer(questionIndex, playerChoice);
             console.log(ansCheck);
-            if (ansCheck===true) {
-            playerOneScore += 10;
-          }else {
-            playerOneScore;
-          };
+            if (ansCheck === true) {
+                playerOneScore += 10;
+            } else {
+                playerOneScore;
+            };
             console.log(playerOneScore);
             switchPlayer();
         } else if (player === 2) {
             var ansCheck = checkAnswer(questionIndex, playerChoice);
             console.log(ansCheck);
-            if (ansCheck===true) {
-            playerTwoScore += 10;
-          }else {
-            playerTwoScore;
-          };
-          console.log(playerTwoScore)
-          switchPlayer();
+            if (ansCheck === true) {
+                playerTwoScore += 10;
+            } else {
+                playerTwoScore;
+            };
+            console.log(playerTwoScore)
+            switchPlayer();
         }
     });
-//nextQuestion();
+    //nextQuestion();
 
     function checkAnswer(questionIndex, playerChoice) {
         if (answers[questionIndex] == playerChoice) {
@@ -74,15 +74,18 @@ $(document).ready(function() {
             player = 1;
         }
     }
-    /*
-function nextQuestion() {
-  var $btn= $('.begin')
-  $btn.click(function() {
-$('divs[i]').removeClass('shown');
-$('divs[i=i+1]').addClass('shown');
-})
-}
-*/
+    var $btn = $('.begin');
+    $btn.click(function() {
+            console.log('button works yay');
+              nextQuestion();
+            function nextQuestion() {
+                $(divs[questionIndex]).removeClass('shown');
+                console.log($(divs[questionIndex]));
+                questionIndex = questionIndex + 1;
+                console.log($(divs[questionIndex]));
+                $(divs[questionIndex]).addClass('shown');
+          };
+        });
 });
 
              /*
