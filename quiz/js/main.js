@@ -34,7 +34,7 @@ $(document).ready(function() {
         playerChoice = 1;
          if (player === 1) {
             updateScoreP1();
-            //  switchPlayer();
+
           }else if (player === 2) {
               updateScoreP2();
           }
@@ -84,7 +84,7 @@ $(document).ready(function() {
             }
 
         }
-      //  $updateScorePl1.text('Your Score is: ' + playerOneScore);
+
     }
 
     function updateScoreP2() {
@@ -95,7 +95,7 @@ $(document).ready(function() {
                 playerTwoScore = playerTwoScore + 10;
                 console.log(playerTwoScore);
             }
-            //$updateScorePl2.text('Your Score is: ' + playerTwoScore);
+
         };
     }
 function displayScores() {
@@ -107,8 +107,6 @@ var $updateScorePl2 = $('.pTwoScore');
     var $btn = $('.begin');
     $btn.click(function() {
         console.log('button works yay');
-        //updateScoreP1();
-      //  updateScoreP2();
         nextQuestion();
         updateQuestion();
         displayScores();
@@ -125,37 +123,13 @@ var $updateScorePl2 = $('.pTwoScore');
               $turn.text('Player 2 its your go!')
             }
         });
+
+        var $btn2= $('.restart');
+        $btn2.click(function() {
+          console.log('reset me');
+          $(divs[5]).removeClass('shown');
+          index = 0;
+          console.log($(divs[index]));
+          $(divs[index]).addClass('shown');
+        });
 });
-
-
-              /*        function numberOfQuestions() {
-                      var classNames=["one","two","three","four","five","six","seven","eight","nine","ten"]
-                      for (var i = 0; i < classNames.length; i++) {
-                              return classNames[i]
-
-                              }
-                            }
-                      //It should return an integer that is the number of questions in a game
-                      currentQuestion()
-
-                      //It should return an integer that is the zero-based index of the current question in the quiz
-                      correctAnswer()
-
-                      //It should return an integer that is the zero-based index the correct answer for the currrent question
-                      numberOfChoices()
-
-                      //It should return an integer that is the number of choices for the current question
-                      playTurn(choice)
-
-                      //It should take a single integer, which specifies which choice the current player wants to make. It should return a boolean true/false if the answer is correct.
-                      isGameOver()
-
-                      //It should return a true or false if the quiz is over.
-                      whoWon()
-
-                      //It should return 0 if the game is not yet over, else it should return either 1 or 2 depending on which player won. It should return 3 if the game is a draw.+
-
-                      restart()
-
-                      //It should restart the game so it can be played again.
-*/
