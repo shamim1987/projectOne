@@ -1,7 +1,6 @@
 #container {
-}
-#carousel {
-  border: 5px solid;
+margin: 1% 1% 1% 1%;
+padding: 1% 1% 1% 1%;
 }
 
 body {
@@ -11,31 +10,27 @@ body {
   background-image: url(http://vignette3.wikia.nocookie.net/impossible-quiz/images/5/50/Wiki-background/revision/latest?cb=20160825050315);
 background-repeat: no-repeat;
 background-size: cover;
+font-family: tahoma sans-serif;
 
 }
 #Rules {
-  border: 1px solid;
-  margin: 3px;
+
+  margin:5%;
   text-align: center;
 }
 
-.player1progress {
-  float: left;
-  border: 1px solid;
-   margin: 2px;
-   width: 45%;
-   display: inline-block;
+.playerprogress {
+  width: 400px;
+  height: 150px;
+   margin: 0 auto;
+   display:block;
 }
-.player2progress {
-  float:right;
-  margin: 2px;
-  border: 1px solid;
-  width: 45%;
-  display: inline-block;
-}
+
 
 #playerturn {
   margin: 0 auto;
+  text-align: center;
+
 }
 th {
   text-align: center;
@@ -53,8 +48,9 @@ ol {
 }
 .question  {
   border: 1px solid;
-  margin:2px;
+  margin:2px auto;;
   display: none;
+  width: 50%;
 }
 
 .start {
@@ -65,11 +61,29 @@ ol {
 .shown {
   display: block;
 }
+.six {
+  text-align: center;
+}
+.ta {
+  margin-bottom: 10px;
+}
 li div {
   border: 1px solid;
   margin: 3px;
-  width: 30%;
+  width: 40%;
+  padding:1%;
   border-radius: 10px;
   background-color: grey;
   padding: 0 auto;
+}
+.p1 {
+  float: left;
+  display: inline-block;
+}
+aside {
+  float: right;
+  display: inline-block;
+}
+.playerprogress {
+
 }
