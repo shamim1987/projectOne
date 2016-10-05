@@ -1,0 +1,109 @@
+var $turn = 1
+var $playerOne
+var $playerTwo
+var $playerOneScore = 0;
+var $playerTwoScore = 0;
+/*
+    $('#carousel').get('.One','.Two','.Three','.Four','.Five','.Six','.Seven','.Eight','.Nine','.Ten');
+    var $questionOne = $('.One');
+    var $questionTwo = $('.Two');
+    var $questionThree = $('.Three');
+    var $questionFour = $('.Four');
+    var $questionFive = $('.Cinq');
+    var $questionSix = $('.Six');
+    var $questionSeven = $('.Seven');
+    var $questionEight = $('.Eight');
+    var $questionNine = $('.Neuf');
+    var $questionTen = $('.Ten');
+    */
+//var $arrayofQns = [];
+//$arrayofQns.push($questionOne, $questionTwo, $questionThree, $questionFour, $questionFive, $questionSix, $questionSeven, $questionEight, $questionNine, $questionTen);
+var $questions = $('#carousel').get()
+var $turn = $('.playerturn');
+var $ansa = $('.a');
+var $ansb = $('.b');
+var $ansc = $('.c');
+var $ansd = $('.d');
+var $correctAnswers = [$ansa, $ansa && $ansc]
+var $carousel = $('#carousel');
+var $currQn = $questions.currentQuestion();
+//$("#carousel> div:gt(0)").hide();
+
+
+
+/*  for (var i = 0; i < $questions.length; i++) {
+      $currQn.addClass('shown');
+      $playerOne.play(function('click') {
+              if $currQn correctAnswer()
+              return $playerOneScore + 10;
+          } else {
+              return $playerOneScore;
+          }
+
+
+          .next();
+          //player one plays first qn
+          $turn.removeText("You are up Player 1"); $turn.addText("You are up Player 2"); $playerTwo.play(function('click') {
+                  if $currQn correctAnswer()
+                  return $playerTwoScore + 10;
+              } else {
+                  return $playerTwoScore;
+              }
+
+              //player 2 plays first qn
+              $turn = $turn + 1; $questions.removeClass('shown'); $turn.removeText("You are up Player 2") $turn.addText("You are up Player 1")
+
+          }
+          /*function numberOfQuestions() {
+              var x = 10;
+          }
+          //It should return an integer that is the number of questions in a game
+          function currentQuestion() {
+              for (var i = 1; i < $questions.length; i++) {
+                  return $questions[i];
+              }
+          }
+
+          //It should return an integer that is the zero-based index of the current question in the quiz
+          function correctAnswer() {
+              for (var i = 0; i < $correctAnswers.length; i++) {
+                  $correctAnswers[i]
+              }
+          }
+          //It should return an integer that is the zero-based index the correct answer for the currrent question
+
+          function numberOfChoices() {
+
+          }
+          //It should return an integer that is the number of choices for the current question
+          function playTurn(choice) {
+              for (var i = 0; i = < 10; i++) {
+                  console.log playTurn;
+              }
+          }
+          //It should take a single integer, which specifies which choice the current player wants to make. It should return a boolean true/false if the answer is correct.
+          function isGameOver() {
+
+          }
+          //It should return a true or false if the quiz is over.
+          function whoWon() {
+
+          }
+          //It should return 0 if the game is not yet over, else it should return either 1 or 2 depending on which player won. It should return 3 if the game is a draw.+
+          function restart() {
+
+          }
+          //It should restart the game so it can be played again.
+      })
+
+
+      if (ansCheck == true) {
+          playerOneScore += 10;
+      } else {
+          playerOneScore;
+        };
+        if (ansCheck == true) {
+            playerTwoScore += 10;
+        } else {
+            playerTwoScore;
+          };

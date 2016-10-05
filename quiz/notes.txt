@@ -9,23 +9,17 @@ if both players still draw, the player with no semi correct answer will be decla
 
 game structure
 players enter site
-Carousel Begins
 players read rules
+
 press start game
 player one starts, answers qn at random
-player 1 clicks next
 if player 1 answers correct, he scores 10 points
 if player 1 answers wrong, he scores 0 points
-in the event of 2 correct answers: 1 correct answer = 2 correct answers = 10 pts,2 correct and 1 wrong =8 pts, 2 correct and 1 or more wrong : 6 pts,
-1 correct :5 points, 1 correct and 1 wrong answer:3 points, 1 correct and 2 or more wrong answers:1 point;
-(note: scores will only be revealed at the end of the game in a popup window)
+switch to player 2
 player 2 starts, answers qn at random
 player 2 clicks next
 if player 2 answers correct, add 10 points
 if player 2 answers wrong, add 0 points
-in the event of 2 correct answers: 2 correct answers = 10 pts,2 correct and 1 wrong =8 pts, 2 correct and 1 or more wrong : 6 pts,
-1 correct answer = 5 points, 1 correct and 1 wrong answer:3 points, 1 correct and 2 or more wrong answers:1 point;
-(note: scores will only be revealed at the end of the game in a popup window)
 back to player 1
 .
 .
@@ -38,23 +32,13 @@ scores are displayed
 Winner/Draw announced:
 if player1 score > player2 score, player 1 wins and vice versa
 alert player x WINS
-Carousel Ends
 
-answer and score determination
-if correct, value in cell class X = value of correct answer
-eg Who sang HMBB1MT?
-if radio cell 1 is clicked(Britney), p1/p2Score = p1/p2Score +10
-if radio cell 2 is clicked(DeadMau5), p1/p2Score= p1/p2Score
 .
 .
 ..
 .
 .
 .
-p1/p2Score(ttl)= p1/p2Score1+p1/p2Score2+........+p1/p2Score10;
-
-game cycle
-p1/p2Score =0
 .....
 loop Q1-Q10......
 ...Q1..
