@@ -20,24 +20,24 @@ $(document).ready(function() {
     player = 1
         //This variable dictates the current player
     $('.a').click(function() {
-      console.log(player);
+        console.log(player);
         playerChoice = 0;
-          if (player === 1) {
-              updateScoreP1();
-              //This function switches player's after they make a selection.
-          } else if (player === 2) {
-              updateScoreP2();
-          }
+        if (player === 1) {
+            updateScoreP1();
+            //This function switches player's after they make a selection.
+        } else if (player === 2) {
+            updateScoreP2();
+        }
     });
     $('.b').click(function() {
-      console.log(player)
+        console.log(player)
         playerChoice = 1;
-         if (player === 1) {
+        if (player === 1) {
             updateScoreP1();
 
-          }else if (player === 2) {
-              updateScoreP2();
-          }
+        } else if (player === 2) {
+            updateScoreP2();
+        }
     });
 
     function checkAnswer(index, playerChoice) {
@@ -98,38 +98,62 @@ $(document).ready(function() {
 
         };
     }
-function displayScores() {
-var $updateScorePl1 = $('.pOneScore');
-var $updateScorePl2 = $('.pTwoScore');
-    $updateScorePl1.text('Your Score is: ' + playerOneScore);
-  $updateScorePl2.text('Your Score is: ' + playerTwoScore);
-}
+
+    function displayScores() {
+        var $updateScorePl1 = $('.pOneScore');
+        var $updateScorePl2 = $('.pTwoScore');
+        $updateScorePl1.text('Your Score is: ' + playerOneScore);
+        $updateScorePl2.text('Your Score is: ' + playerTwoScore);
+    }
     var $btn = $('.begin');
     $btn.click(function() {
         console.log('button works yay');
         nextQuestion();
         updateQuestion();
         displayScores();
+
     });
 
     var $btn1 = $('.P2');
     $btn1.click(function() {
-            console.log('man Im good,2 u r up');
-            switchPlayer();
-            var $turn = $('.turn');
-            if (player===1) {
-              $turn.text('Player 1 you are up!')
-            } else if(player ===2) {
-              $turn.text('Player 2 its your go!')
-            }
-        });
+        console.log('man Im good,2 u r up');
+        switchPlayer();
+        var $turn = $('.turn');
+        if (player === 1) {
+            $turn.text('Player 1 you are up!')
+        } else if (player === 2) {
+            $turn.text('Player 2 its your go!')
+        }
+    });
 
-        var $btn2= $('.restart');
-        $btn2.click(function() {
-          console.log('reset me');
-          $(divs[5]).removeClass('shown');
-          index = 0;
-          console.log($(divs[index]));
-          $(divs[index]).addClass('shown');
-        });
+    var $btn2 = $('.restart');
+    $btn2.click(function() {
+        var $updateScorePl1 = $('.pOneScore');
+        var $updateScorePl2 = $('.pTwoScore');
+        var $updateQnP1 = $('.pOneQn');
+        var $updateQnP2 = $('.pTwoQn');
+        console.log('reset me');
+        $(divs[5]).removeClass('shown');
+        index = 0;
+        console.log($(divs[index]));
+        $(divs[index]).addClass('shown');
+        $updateQnP1.text('Question 1');
+        $updateQnP2.text('Question 1');
+        $updateScorePl1.text('Your Score is: Zilch baby!! ');
+        $updateScorePl2.text('Your Score is: Zilch too Mate!! ');
+
+    });
+       var $btn3=$('.winner')
+       $btn3.click(function() {
+         console.log('last button phew');
+         winner();
+       });
+    function winner(){
+     if (playerOneScore > playerTwoScore) {
+        alert('Player 1 wins Mate! Sorry Player 2')
+      } else if (playerTwoScore > playerOneScore) {
+        alert('Player 2 wins Mate! Sorry Player 1')
+      }
+    }
+
 });

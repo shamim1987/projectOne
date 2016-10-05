@@ -1,17 +1,21 @@
 #container {
-margin: 1% 1% 1% 1%;
+margin: 5% 1% 1% 1%;
 padding: 1% 1% 1% 1%;
 }
 
 body {
-  height: 800px;
-  width: 800px;
+  height:1000px;
+  width: 900px;
   margin: 0 auto;
-  background-image: url(http://vignette3.wikia.nocookie.net/impossible-quiz/images/5/50/Wiki-background/revision/latest?cb=20160825050315);
+  background-image: url(http://wallpapercave.com/wp/IsrovUc.jpg);
 background-repeat: no-repeat;
 background-size: cover;
-font-family: tahoma sans-serif;
-
+font-family: 'Raleway', sans-serif;
+color: white;
+text-align: center;
+}
+header {
+  padding-bottom: 30px;
 }
 #Rules {
 
@@ -20,7 +24,7 @@ font-family: tahoma sans-serif;
 }
 
 .playerprogress {
-  width: 400px;
+  width: 500px;
   height: 150px;
    margin: 0 auto;
    display:block;
@@ -48,9 +52,11 @@ ol {
 }
 .question  {
   border: 1px solid;
-  margin:2px auto;;
+  border-radius: 10px;
+  margin:4px auto;;
   display: none;
-  width: 50%;
+  width: 60%;
+  height:50%
 }
 
 .start {
@@ -69,7 +75,7 @@ ol {
 }
 li div {
   border: 1px solid;
-  margin: 3px;
+  margin: 3px auto;;
   width: 40%;
   padding:1%;
   border-radius: 10px;
@@ -84,6 +90,9 @@ aside {
   float: right;
   display: inline-block;
 }
-.playerprogress {
-
+span {
+color: black;
+}
+audio {
+  margin-left: 25px;
 }
