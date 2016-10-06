@@ -7,7 +7,7 @@ $(document).ready(function() {
     //This variable dictates the position number of the qns ans ans in the array
     var playerOneScore = 0;
     var playerTwoScore = 0;
-    //The variables abv dictate the player's scores
+    //The variables abv dictate the player's initial scores
     var answers = [0, 0, 1, 1, 0];
     //This array is the answer key
     var playerChoice;
@@ -24,7 +24,7 @@ $(document).ready(function() {
         playerChoice = 0;
         if (player === 1) {
             updateScoreP1();
-            //This function switches player's after they make a selection.
+
         } else if (player === 2) {
             updateScoreP2();
         }
@@ -39,7 +39,7 @@ $(document).ready(function() {
             updateScoreP2();
         }
     });
-
+//the above function registers a player's answer and records his response
     function checkAnswer(index, playerChoice) {
         if (answers[index] == playerChoice) {
             return true;
@@ -47,7 +47,7 @@ $(document).ready(function() {
             return false;
         }
     };
-
+//the abv function tests whether a player's response is in line with the answer key
     function switchPlayer() {
         if (player === 1) {
             player = 2;
@@ -55,7 +55,7 @@ $(document).ready(function() {
             player = 1;
         }
     }
-
+//this function cycles between players
     function nextQuestion() {
         $(divs[index]).removeClass('shown');
         console.log($(divs[index]));
@@ -63,16 +63,15 @@ $(document).ready(function() {
         console.log($(divs[index]));
         $(divs[index]).addClass('shown');
     };
-
+//this function goes to the next question
     function updateQuestion() {
         var $updateQnP1 = $('.pOneQn');
         var $updateQnP2 = $('.pTwoQn');
         var question = [1, 2, 3, 4, 5, 'Finito']
         $updateQnP1.text('Question ' + question[index]);
         $updateQnP2.text('Question ' + question[index]);
-
     };
-
+//this function displays the question on screen
     function updateScoreP1() {
         var $updateScorePl1 = $('.pOneScore');
 
@@ -86,7 +85,7 @@ $(document).ready(function() {
         }
 
     }
-
+//this function update's player 1s score
     function updateScoreP2() {
         var $updateScorePl2 = $('.pTwoScore');
         if (player === 2) {
@@ -97,7 +96,7 @@ $(document).ready(function() {
             }
 
         };
-    }
+    }//this update's player 2's score
 
     function displayScores() {
         var $updateScorePl1 = $('.pOneScore');
@@ -105,15 +104,15 @@ $(document).ready(function() {
         $updateScorePl1.text('Your Score is: ' + playerOneScore);
         $updateScorePl2.text('Your Score is: ' + playerTwoScore);
     }
+    //this function displays the player's scores on the screen.
     var $btn = $('.begin');
     $btn.click(function() {
         console.log('button works yay');
         nextQuestion();
         updateQuestion();
         displayScores();
-
     });
-
+//when this button is clicked,the next qn is launched and updates scores in a way each player cannot guess the answer from the prev player.
     var $btn1 = $('.P2');
     $btn1.click(function() {
         console.log('man Im good,2 u r up');
@@ -125,7 +124,7 @@ $(document).ready(function() {
             $turn.text('Player 2 its your go!')
         }
     });
-
+//this button cycles between players 1 and 2
     var $btn2 = $('.restart');
     $btn2.click(function() {
         var $updateScorePl1 = $('.pOneScore');
@@ -135,19 +134,22 @@ $(document).ready(function() {
         console.log('reset me');
         $(divs[5]).removeClass('shown');
         index = 0;
+        playerOneScore=0;
+        playerTwoScore=0;
         console.log($(divs[index]));
         $(divs[index]).addClass('shown');
         $updateQnP1.text('Question 1');
         $updateQnP2.text('Question 1');
         $updateScorePl1.text('Your Score is: Zilch baby!! ');
         $updateScorePl2.text('Your Score is: Zilch too Mate!! ');
-
     });
+    //this button restarts the game
        var $btn3=$('.winner')
        $btn3.click(function() {
          console.log('last button phew');
          winner();
        });
+       //this button alerts the players to the winner of the game
     function winner(){
      if (playerOneScore > playerTwoScore) {
         alert('Player 1 wins Mate! Sorry Player 2')
@@ -155,5 +157,5 @@ $(document).ready(function() {
         alert('Player 2 wins Mate! Sorry Player 1')
       }
     }
-
+//this function determines the winner.
 });
