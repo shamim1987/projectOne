@@ -1,6 +1,6 @@
 $(document).ready(function() {
     console.log("Good 2 Go");
-
+//this shows the DOM is ready
     var player;
     //This is the player;
     var index = 0;
@@ -39,7 +39,7 @@ $(document).ready(function() {
             updateScoreP2();
         }
     });
-    //the above function registers a player's answer and records his response
+    //the above function registers a player's answer on click and records his response
     function checkAnswer(index, playerChoice) {
         if (answers[index] == playerChoice) {
             return true;
@@ -96,7 +96,8 @@ $(document).ready(function() {
             }
 
         };
-    } //this update's player 2's score
+    }
+     //this update's player 2's score
 
     function displayScores() {
         var $updateScorePl1 = $('.pOneScore');
@@ -114,6 +115,7 @@ $(document).ready(function() {
     });
     //when this button is clicked,the next qn is launched and updates scores in a way each player cannot guess the answer from the prev player.
     var $btn1 = $('.P2');
+    //this button changes the player turn.
     $btn1.click(function() {
         console.log('man Im good,2 u r up');
         switchPlayer();
@@ -124,8 +126,9 @@ $(document).ready(function() {
             $turn.text('Player 2 its your go!')
         }
     });
-    //this button cycles between players 1 and 2
+    //this function allows cycling between players 1 and 2
     var $btn2 = $('.restart');
+    //this button once pressed restarts the game
     $btn2.click(function() {
         var $updateScorePl1 = $('.pOneScore');
         var $updateScorePl2 = $('.pTwoScore');
@@ -143,7 +146,7 @@ $(document).ready(function() {
         $updateScorePl1.text('Your Score is: Zilch baby!! ');
         $updateScorePl2.text('Your Score is: Zilch too Mate!! ');
     });
-    //this button restarts the game
+    //this function restarts the game upon click
     var $btn3 = $('.winner')
     $btn3.click(function() {
         console.log('last button phew');
