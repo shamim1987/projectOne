@@ -8,11 +8,11 @@ $(document).ready(function() {
     var playerOneScore = 0;
     var playerTwoScore = 0;
     //The variables abv dictate the player's initial scores
-    var answers = [0, 0, 1, 1, 0];
+    var answers = [0, 0, 1, 1, 0,1,1,0,1,1];
     //This array is the answer key
     var playerChoice;
     //This variable dictates the player's answer based on the option he/she clicked
-    var divs = ['.one', '.two', '.three', '.four', '.five', '.six']
+    var divs = ['.one', '.two', '.three', '.four', '.five', '.six','.seven','.eight','.nine','.ten','.eleven']
         //This array contains the question divs
 
     $(divs[index]).addClass('shown');
@@ -67,7 +67,7 @@ $(document).ready(function() {
     function updateQuestion() {
         var $updateQnP1 = $('.pOneQn');
         var $updateQnP2 = $('.pTwoQn');
-        var question = [1, 2, 3, 4, 5, 'Finito']
+        var question = [1, 2, 3, 4, 5,6,7,8,9,10,'Finito']
         $updateQnP1.text('Question ' + question[index]);
         $updateQnP2.text('Question ' + question[index]);
     };
@@ -132,7 +132,7 @@ $(document).ready(function() {
         var $updateQnP1 = $('.pOneQn');
         var $updateQnP2 = $('.pTwoQn');
         console.log('reset me');
-        $(divs[5]).removeClass('shown');
+        $(divs[10 ]).removeClass('shown');
         index = 0;
         playerOneScore=0;
         playerTwoScore=0;
