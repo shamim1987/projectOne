@@ -1,6 +1,6 @@
 $(document).ready(function() {
     console.log("Good 2 Go");
-//this shows the DOM is ready
+    //this shows the DOM is ready
     var player;
     //This is the player;
     var index = 0;
@@ -97,7 +97,7 @@ $(document).ready(function() {
 
         };
     }
-     //this update's player 2's score
+    //this update's player 2's score
 
     function displayScores() {
         var $updateScorePl1 = $('.pOneScore');
